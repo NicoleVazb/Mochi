@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mochi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <img id="img0" alt="">
+    <h1>Mochi</h1>
+    <img id="img1" alt="">
+  </div>
+
+  <div class="bar">
+    <div class="weeknav">
+      <button type="button" id="prev" aria-label="Semana anterior">‹</button>
+      <span id="wlabel"></span>
+      <button type="button" id="next" aria-label="Próxima semana">›</button>
+      <button type="button" id="today" hidden>Hoje</button>
+    </div>
+    <div class="tools">
+      <button type="button" id="theme" aria-label="Alternar modo escuro" title="Modo escuro">
+        <svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button type="button" id="more" aria-label="Mais opções" title="Mais opções">
+        <svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="19" cy="12" r="1.4"/></svg>
+      </button>
+    </div>
+    <div class="menu" id="menu" hidden>
+      <button type="button" id="mystk">Minhas figurinhas</button>
+      <button type="button" id="copy">Copiar para a próxima semana</button>
+      <button type="button" id="clear">Limpar semana</button>
+    </div>
+  </div>
+
+  <div class="card"><div class="grid" id="grid"></div></div>
+
+  <div class="card habits">
+    <div class="hh"><h2>Hábitos</h2></div>
+    <div class="hscroll"><div class="hgrid" id="hgrid"></div></div>
+    <button type="button" class="hadd" id="hadd">+ Novo hábito</button>
+  </div>
+</div>
+
+<div class="modal" id="modal" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="mt">
+    <div class="mh"><h2 id="mt">Minhas figurinhas</h2><button type="button" id="mclose" aria-label="Fechar">×</button></div>
+    <p class="mp">Crie com uma imagem sua ou com um emoji ou até 4 letras.</p>
+    <div class="mrow"><button type="button" id="upimg" class="mbtn">Enviar imagem</button></div>
+    <div class="mrow"><input id="txtstk" placeholder="Ex.: 🍕 ou OK" maxlength="12" aria-label="Emoji ou texto"><button type="button" id="addtxt" class="mbtn">Adicionar</button></div>
+    <div class="mlist" id="mlist"></div>
+  </div>
+  <input type="file" accept="image/*" id="fileStk" hidden>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
